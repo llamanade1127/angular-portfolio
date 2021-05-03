@@ -1,0 +1,24 @@
+<section class="section">
+    <div class="container" *ngIf="myUser">
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-4by4">
+                            <img [src]="myUser.avatar_url">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="titel is-4">{{myUser.login}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                {{myUser.bio}}
+            </div>
+            <footer class="card-footer">
+                <a class="card-footer-item is-centered" [href]="myUser.html_url"> View my profile!</a>
+            </footer>
+        </div>
+    </div>
+</section>

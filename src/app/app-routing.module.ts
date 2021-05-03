@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import {UsersModule} from './users/users.module';
+import { ViewMeComponent } from './view-me/view-me.component';
+import { ViewMyLifeComponent } from './view-my-life/view-my-life.component';
 const routes: Routes = [
   {
     path:'',
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path:'users',
     loadChildren: () => UsersModule
+  },
+  {
+    path:'viewMe',
+    component: ViewMeComponent
+  },
+  {
+    path:'viewMyLife',
+    component:ViewMyLifeComponent
   }
 ];
 

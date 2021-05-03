@@ -9,7 +9,7 @@ import { UserSingleComponent } from './user-single/user-single.component';
 @NgModule({
   declarations: [
     UserListComponent,
-    UserSingleComponent
+    UserSingleComponent,
   ],
   imports: [
     CommonModule,

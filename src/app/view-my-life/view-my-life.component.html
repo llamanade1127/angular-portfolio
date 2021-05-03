@@ -1,0 +1,36 @@
+
+<section class="hero is-link is-bold is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="title is-centered">My Portfolio</div>
+            <div class="subtitle">All of this is in a database and gets updated frequently!<br>Check back in a few days to see some improvment! </div>
+        </div>
+    </div>
+
+    <div class="hero-footer">
+        <section class="section" *ngIf="items">
+            <div class="column is-4" *ngFor="let item of items | async">
+                <!--This will get looped for each card-->
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">{{item.name}}</p>
+                        <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                              <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                    </header>
+                    <div class="card-content">
+                        <div class="content">{{item.desc}} </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="{{item.url}}" class="card-footer-item">View!</a>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</section>
+

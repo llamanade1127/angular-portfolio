@@ -29,4 +29,14 @@ export class UserService {
   test(username: string){
     this.http.get(`${this.apiUrl}/${username}`).subscribe(data => console.log(data))
   }
+
+  sendEmail(email: string, body: string, name: string, url: string, callback: CallableFunction){
+    this.http.post(url, {
+      name:name,
+      replyTo:email,
+      message: body
+    }).subscribe(res => {
+      callback(res['ok'])
+    })
+  }
 }
